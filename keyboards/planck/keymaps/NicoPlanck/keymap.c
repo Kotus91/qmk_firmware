@@ -33,7 +33,7 @@ enum planck_layers {
 enum planck_keycodes {
   AZERTY = SAFE_RANGE,
   QWERTY,
-  BÉPO,
+  BEPO,
   PLOVER,
   BACKLIT,
   EXT_PLV
@@ -90,11 +90,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
-[_BÉPO] = {
-  {KC_B,  KC_, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC},
-  {KC_A,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH},
-  {KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT },
-  {BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
+[_BEPO] = {
+  {BP_B,      BP_ECUT,   KC_P,       KC_O,         BP_EGRV ,      BP_DCRC ,    KC_V,       KC_D,    KC_L,        KC_J,             KC_Z,        KC_BSPC},
+  {BP_A,      KC_U,          KC_I,        KC_E,          BP_COMM,    KC_C,            KC_T,       KC_S,     KC_R,        KC_N,           KC_M,      KC_DEL},
+  {KC_LSFT, KC_Y,          KC_X,       KC_DOT,    KC_K,               BP_APOS,     KC_Q,      KC_G,    KC_H,        KC_F,            KC_W,      KC_ENT },
+  {KC_LCTL, KC_APP,     KC_LALT, KC_LGUI,   LOWER,           KC_SPC,        KC_SPC,  RAISE,    KC_LEFT,   KC_DOWN, KC_UP,     KC_RGHT}
 },
 
 /* Lower
