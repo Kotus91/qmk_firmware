@@ -53,10 +53,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * `-----------------------------------------------------------------------------------'
 */
 [_AZERTY] = {
-    {KC_ESC,  KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
-    {KC_TAB,  KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT},
-    {KC_LSFT, KC_W,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_COMM, KC_DOT,  KC_DOT,  KC_SLSH, KC_DEL },
-    {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
+    {FR_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    FR_BSPC},
+    {FR_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_SCLN, FR_ENT},
+    {FR_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_SCLN,  FR_EXLM, FR_DEL },
+    {FR_LCTL, FR_APP,  FR_LALT, FR_LGUI, LOWER,   FR_SPC,  FR_SPC,  RAISE,   FR_LEFT, FR_UP,   FR_DOWN, FR_RGHT}
   },
 
 /* Qwerty
@@ -89,10 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_BEPO] = {
-  {BP_B,    BP_ECUT, KC_P,    KC_O,    BP_EGRV , BP_DCRC , KC_V,    KC_D,  KC_L,    KC_J,    KC_Z,  KC_BSPC},
-  {BP_A,    KC_U,    KC_I,    KC_E,    BP_COMM,  KC_C,     KC_T,    KC_S,  KC_R,    KC_N,    KC_M,  KC_ENT},
-  {KC_LSFT, KC_Y,    KC_X,    KC_DOT,  KC_K,     BP_APOS,  KC_Q,    KC_G,  KC_H,    KC_F,    KC_W,  KC_DEL },
-  {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
+  {BP_B HT}
 },
 
 /* Lower
