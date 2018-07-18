@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_AZERTY] = {
     {FR_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    FR_BSPC},
     {FR_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_SCLN, FR_ENT},
-    {FR_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_SCLN,  FR_EXLM, FR_DEL },
+    {FR_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_DOT,  FR_SLSH, FR_DEL },
     {FR_LCTL, FR_APP,  FR_LALT, FR_LGUI, LOWER,   FR_SPC,  FR_SPC,  RAISE,   FR_LEFT, FR_UP,   FR_DOWN, FR_RGHT}
   },
 
@@ -89,7 +89,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_BEPO] = {
-  {BP_B HT}
+  {BP_B,    BP_E_ACUTE, BP_P,    BP_O,    BP_E_GRAVE , BP_DCRC , BP_V,    BP_D,  BP_L,    BP_J,    BP_Z,  BP_BSPC},
+  {BP_A,    BP_U,    BP_I,    BP_E,    BP_COMMA,  BP_C,     BP_T,    BP_S,  BP_R,    BP_N,    BP_M,  BP_ENT},
+  {BP_LSFT, BP_Y,    BP_X,    BP_DOT,  BP_K,     BP_APOS,  BP_Q,    BP_G,  BP_H,    BP_F,    BP_W,  BP_DEL },
+  {BP_LCTL, BP_APP,  BP_LALT, BP_LGUI, LOWER,   BP_SPC,  BP_SPC,  RAISE,   BP_LEFT, BP_UP,   BP_DOWN, BP_RGHT}
 },
 
 /* Lower
