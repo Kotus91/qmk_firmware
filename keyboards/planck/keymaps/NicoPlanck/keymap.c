@@ -52,12 +52,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left |  Up  | Down |Right |
 * `-----------------------------------------------------------------------------------'
 */
+
 [_AZERTY] = {
-    {FR_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    FR_BSPC},
-    {FR_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_SCLN, FR_ENT},
-    {FR_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_DOT,  FR_SLSH, FR_DEL },
-    {FR_LCTL, FR_APP,  FR_LALT, FR_LGUI, LOWER,   FR_SPC,  FR_SPC,  RAISE,   FR_LEFT, FR_UP,   FR_DOWN, FR_RGHT}
+    {KC_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
+    {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_ENT},
+    {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_DEL },
+    {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
+
+/*
+[_AZERTY] = {
+    {KC_ESC,  KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+    {KC_TAB,  S(KC_1),  S(KC_2),  S(KC_3),   S(KC_4),    S(KC_5),    S(KC_6),    S(KC_7),    S(KC_8),    S(KC_9),    S(KC_0),    KC_ENT},
+    {KC_LSFT, KC_1, KC_2,   KC_3,   KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_DEL },
+    {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
+  },
+  /*[_AZERTY] = {
+      {KC_ESC,  KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+      {KC_TAB,  KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_M,    KC_ENT},
+      {KC_LSFT, KC_W,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_COMM, KC_DOT,  KC_COLN, KC_EXLM, KC_DEL },
+      {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
+    },*/
+
 
 /* Qwerty
  * ,-----------------------------------------------------------------------------------.
@@ -89,10 +105,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_BEPO] = {
-  {BP_B,    BP_E_ACUTE, BP_P,    BP_O,    BP_E_GRAVE , BP_DCRC , BP_V,    BP_D,  BP_L,    BP_J,    BP_Z,  BP_BSPC},
-  {BP_A,    BP_U,    BP_I,    BP_E,    BP_COMMA,  BP_C,     BP_T,    BP_S,  BP_R,    BP_N,    BP_M,  BP_ENT},
-  {BP_LSFT, BP_Y,    BP_X,    BP_DOT,  BP_K,     BP_APOS,  BP_Q,    BP_G,  BP_H,    BP_F,    BP_W,  BP_DEL },
-  {BP_LCTL, BP_APP,  BP_LALT, BP_LGUI, LOWER,   BP_SPC,  BP_SPC,  RAISE,   BP_LEFT, BP_UP,   BP_DOWN, BP_RGHT}
+  {BP_B,    BP_E_ACUTE, BP_P,    BP_O,    BP_E_GRAVE , BP_DCRC , BP_V,    BP_D,  BP_L,    BP_J,  BP_Z,    KC_BSPC},
+  {BP_A,    BP_U,       BP_I,    BP_E,    BP_COMMA,    BP_C,     BP_T,    BP_S,  BP_R,    BP_N,  BP_M,    KC_ENT},
+  {KC_LSFT, BP_Y,       BP_X,    BP_DOT,  BP_K,        BP_APOS,  BP_Q,    BP_G,  BP_H,    BP_F,  BP_W,    KC_DEL },
+  {KC_LCTL, KC_APP,     KC_LALT, KC_LGUI, LOWER,       KC_SPC,   KC_SPC,  RAISE, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT}
 },
 
 /* Lower
@@ -107,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'r
  */
 [_LOWER] = {
-  {KC_ESC,  _______, _______, _______, _______, _______, _______, KC_7,    KC_8,  KC_9,   KC_PLUS, KC_BSPC},
+  {KC_ESC,  BP_AGRV, BP_ECUT, BP_EGRV, _______, _______, _______, KC_7,    KC_8,  KC_9,   KC_PLUS, KC_BSPC},
   {KC_TAB,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_4,    KC_5,  KC_6,   KC_MINS, KC_ENT},
   {KC_LSFT, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_1,    KC_2,  KC_3,   KC_ASTR, KC_DEL},
   {KC_LCTL, _______, _______, _______, _______, _______, _______, _______, KC_0,  KC_DOT, KC_SLSH, KC_EQL}
