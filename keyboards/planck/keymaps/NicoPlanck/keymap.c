@@ -17,7 +17,9 @@
 #include "planck.h"
 #include "action_layer.h"
 #include "keymap_bepo.h"
-#include "keymap_french.h"
+
+/*#include "keymap_french.h"
+*/
 
 extern keymap_config_t keymap_config;
 
@@ -54,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 
 [_AZERTY] = {
-    {KC_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
-    {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_ENT},
-    {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_DEL },
+    {KC_ESC,  KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+    {KC_TAB,  KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_M,    KC_ENT},
+    {KC_LSFT, KC_W,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_COMM, KC_DOT,  KC_COLN, KC_EXLM, KC_DEL },
     {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
 
@@ -67,7 +69,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {KC_LSFT, KC_1, KC_2,   KC_3,   KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_DEL },
     {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
-
   /*[_AZERTY] = {
       {KC_ESC,  KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
       {KC_TAB,  KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_M,    KC_ENT},
@@ -143,9 +144,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  _ \ ¨ ~
  */
 [_RAISE] = {
-  {KC_ESC,  BP_DQOT, BP_LGIL, BP_RGIL, BP_LPRN, BP_RPRN, BP_AMPR, KC_AT,   BP_EURO, KC_NUHS, BP_PERCENT, KC_BSPC},
-  {KC_TAB,  BP_AGRV, BP_ECUT, BP_EGRV, KC_LBRC, KC_RBRC, BP_LESS, BP_GRTR, KC_HOME, KC_PGUP,    KC_PGDN, KC_END},
-  {KC_LSFT, BP_OE,   BP_UGRV, BP_CCED, KC_LCBR, KC_RCBR, KC_PIPE, KC_UNDS, KC_BSLS, BP_DTRM, KC_TILD,    KC_PGDN},
+  {KC_ESC,  KC_3, KC_LGIL, KC_RGIL, KC_5, KC_RPRN, KC_1, KC_AT,   KC_EURO, KC_NUHS, KC_PERCENT, KC_BSPC},
+  {KC_TAB,  KC_0, KC_2, KC_7, KC_LBRC, KC_RBRC, KC_LESS, KC_GRTR, KC_HOME, KC_PGUP,    KC_PGDN, KC_END},
+  {KC_LSFT, KC_OE,   KC_UGRV, KC_CCED, KC_LCBR, KC_RCBR, KC_PIPE, KC_UNDS, KC_BSLS, KC_DTRM, KC_TILD,    KC_PGDN},
   {KC_LCTL, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU,    KC_MPLY}
 },
 
