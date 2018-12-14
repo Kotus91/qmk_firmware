@@ -26,18 +26,18 @@
 
 // Normal characters
 #define FR_SUP2	KC_GRV
-#define FR_AMP	S(KC_1)
-#define FR_EACU	KC_2)
-#define FR_QUOT	KC_3)
-#define FR_APOS	KC_4)
-#define FR_LPRN	KC_5)
-#define FR_MINS	KC_6)
-#define FR_EGRV	KC_7)
-#define FR_UNDS	KC_8)
-#define FR_CCED	KC_9)
-#define FR_AGRV	KC_0)
-#define FR_RPRN	KC_MINS)
-#define FR_EQL	KC_EQL
+#define FR_AMP	LSFT(KC_1)
+#define FR_EACU	LSFT(KC_2)
+#define FR_QUOT	LSFT(KC_3)
+#define FR_APOS	LSFT(KC_4)
+#define FR_LPRN	LSFT(KC_5)
+#define FR_MINS	LSFT(KC_6)
+#define FR_EGRV	LSFT(KC_7)
+#define FR_UNDS	LSFT(KC_8)
+#define FR_CCED	LSFT(KC_9)
+#define FR_AGRV	LSFT(KC_0)
+#define FR_RPRN	LSFT(KC_MINS)
+#define FR_EQL	LSFT(KC_EQL
 
 
 //Numbers
@@ -74,7 +74,7 @@
 #define FR_V KC_V
 #define FR_B KC_B
 #define FR_N KC_N
-#define FR_COMM KC_M
+#define FR_COMM KC_DOT
 #define FR_DOT KC_COMM
 #define FR_COLN KC_COLN
 #define FR_EXLM KC_SLSH
