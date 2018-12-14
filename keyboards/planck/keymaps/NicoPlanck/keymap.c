@@ -29,7 +29,6 @@ enum planck_layers {
   _BEPO,
   _LOWER,
   _RAISE,
-
   _ADJUST
 };
 
@@ -79,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
   {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
   {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
-
+  },
 
 /* BEPO
  * ,-----------------------------------------------------------------------------------.
@@ -91,15 +90,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
- 
+ */
 [_BEPO] = {
   {KC_B,    KC_E_ACUTE, KC_P,    KC_O,    KC_E_GRAVE , KC_DCRC , KC_V,    KC_D,  KC_L,    KC_J,  KC_Z,    KC_BSPC},
   {KC_A,    KC_U,       KC_I,    KC_E,    KC_COMMA,    KC_C,     KC_T,    KC_S,  KC_R,    KC_N,  KC_M,    KC_ENT},
   {KC_LSFT, KC_Y,       KC_X,    KC_DOT,  KC_K,        KC_APOS,  KC_Q,    KC_G,  KC_H,    KC_F,  KC_W,    KC_DEL },
   {KC_LCTL, KC_APP,     KC_LALT, KC_LGUI, LOWER,       KC_SPC,   KC_SPC,  RAISE, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT}
 },
-
-*/
 
 
 /* Lower
