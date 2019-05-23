@@ -16,7 +16,8 @@
 
 #include "planck.h"
 #include "action_layer.h"
-#include "keymap_french.h"
+
+//#include "keymap_french.h"
 
 extern keymap_config_t keymap_config;
 
@@ -27,7 +28,7 @@ enum planck_layers {
   _LOWER,
   _ADJUST
 };
-c
+
 enum planck_keycodes {
   AZERTY = SAFE_RANGE,
   BEPO
@@ -42,17 +43,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * ,-----------------------------------------------------------------------------------.
 * | Esc  |   A  |   Z  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
 * |------+------+------+------+------+-------------+------+------+------+------+------|
-* | Tab  |   Q  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   M  | Del  |
+* | Tab  |   Q  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   M  |Enter |
 * |------+------+------+------+------+------|------+------+------+------+------+------|
-* | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   :  |   !  | Enter|
+* | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   :  |   !  | Del  |
 * |------+------+------+------+------+------+------+------+------+------+------+------|
-* | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left |  Up  | Down | Right|
+* | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left |  Up  | Down |Right |
 * `-----------------------------------------------------------------------------------'
 */
 [_AZERTY] = {
-  {KC_ESC,  FR_A,    FR_W,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
-  {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_DEL},
-  {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_ENT},
+  {KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+  {KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT},
+  {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    S(KC_COMM), KC_DOT,  KC_SLSH, KC_DEL},
   {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
 
@@ -66,51 +67,50 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * |------+------+------+------+------+------+------+------+------+------+------+------|
 * | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left |  Up  | Down |Right |
 * `-----------------------------------------------------------------------------------'
-
+*/
 [_BEPO] = {
   {KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
   {KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT},
   {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    S(KC_COMM), KC_DOT,  KC_SLSH, KC_DEL},
   {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
-*/
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * | Esc  |  F1  |  F2  |  F3  |  F4  |      |      |   7  |   8  |   9  |   +  | Bksp |
+ * | Esc  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   7  |   8  |   9  |   +  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Tab  |  F5  |  F6  |  F7  |  F8  |      |      |   4  |   5  |   6  |   -  |   %  |
+ * | Tab  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |   4  |   5  |   6  |   -  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|  F9  |  F10 |  F11 |  F12 |      |      |   1  |   2  |  3   |   *  | Ent  |
+ * | Shift|   °  |      |      |      |      |  %   |   1  |   2  |  3   |   *  | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      |      |      |             |      |   0  |   .  | ISO /|  =   |
  * `-----------------------------------------------------------------------------------'r
  */
 [_RAISE] = {
-  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,  FR_8,  FR_9,     KC_PPLS,  KC_BSPC},
-  {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,  FR_5,  FR_6,     KC_PMNS,  FR_PERC},
-  {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,  FR_2,  FR_3,     KC_PAST,  KC_ENT},
-  {KC_LCTL, _______, _______, _______, _______, _______, _______, ____,  FR_0,  KC_PDOT,  KC_PSLS,  KC_PEQL}
+  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6, S(KC_7),    S(KC_8),  S(KC_9),   KC_PLUS, KC_BSPC},
+  {KC_TAB,  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     S(KC_4),    S(KC_5),  S(KC_6),   KC_6, KC_ENT},
+  {KC_LSFT, KC_UNDS, _______, _______, _______, _______, S(KC_QUOT),    S(KC_1),    S(KC_2),  S(KC_3),   KC_BSLS, KC_DEL},
+  {KC_LCTL, _______, _______, _______, _______, _______, _______, _______,      S(KC_0) , S(KC_COMM),    S(KC_DOT), KC_EQL}
 },
 
 
 /* Lower
- * ,-----------------------------------------------------------------------------------.
- * |  Esc |   à  |   é  |   è  |   '  |   (  |  )   |   "  |   -  |   _  |   @  |      |
+ * ,---------------------------------------------------------------------------- ----.
+ * |  Esc |  &   |   é  |   "  |  '   |   (  |  )   |  -   |  è   |   _  |  ç   |  à   |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |  Tab |   ù  |   €  |   ç  |  ^   |   [  |  ]   |   <  |   >  | Home | End  |      |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|   #  |   &  |      |   |  |   {  |  }   |      |   \  | PgUp | PgDn | Mute |
+ * |  Tab |   #  |   €  |   ^  |   [  |   ]  |   <  |   >  | Home |PG Up |Pg Dn | End  |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * | Shift|   µ  |   ù  |   @  |   {  |   }  | ISO ||      |   \  |   ¨  |      | Mute |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  _ \ ¨ ~
  */
 [_LOWER] = {
-  {KC_ESC,  FR_AGRV, 	FR_EACU, 	FR_EGRV, 	FR_APOS,  FR_LPRN,   FR_RPRN,  FR_UMLT,   FR_MINS,  FR_UNDS, 	FR_AT, 	  _______},
-  {KC_TAB,  FR_UGRV,  FR_EURO,  FR_CCED,  FR_CIRC,  FR_LBRC,   FR_RBRC,  FR_LESS,   FR_MORE,  KC_HOME,  KC_END,   _______},
-  {KC_LSFT, FR_HASH,  FR_AMP, 	_______,  FR_PIPE,  FR_LCBR,   FR_RCBR,  _______, 	FR_BSLS, 	KC_PGUP,  KC_PGDN,  KC_MUTE},
-  {KC_LCTL, _______, 	_______, 	_______, 	_______, 	_______, 	_______,   _______,   KC_MNXT,	KC_VOLD, 	KC_VOLU,  KC_MPLY}
+  {KC_ESC,  KC_1, 		KC_2, 		KC_3, 		KC_4, 		KC_5, 			KC_MINUS, KC_6,    KC_7, 		KC_8, 		KC_9, 		KC_0},
+  {KC_TAB,  RALT(KC_3), RALT(KC_E), KC_LBRC, RALT(KC_5), RALT(KC_MINUS), 	KC_NUBS, S(KC_NUBS), 	KC_HOME, 	KC_PGUP,    KC_PGDN, KC_END},
+  {KC_LSFT, KC_PIPE,    KC_QUOT, 	RALT(KC_0), RALT(KC_4), RALT(KC_EQL), 	RALT(KC_6), _______, 	RALT(KC_8), 	S(KC_LBRC), _______, KC_PGDN},
+  {KC_LCTL, _______, 	_______, 	_______, 	_______, 	_______, 	_______, _______, 	KC_MNXT,	KC_VOLD, 	KC_VOLU, KC_MPLY}
 },
 
 

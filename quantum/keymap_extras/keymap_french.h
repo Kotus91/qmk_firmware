@@ -24,7 +24,10 @@
 #endif
 #define NO_ALGR KC_RALT
 
-// Normal characters
+// AZERTY
+
+	// 1 ligne
+
 #define FR_SUP2	KC_GRV
 #define FR_AMP	KC_1
 #define FR_EACU	KC_2
@@ -39,22 +42,52 @@
 #define FR_RPRN	KC_MINS
 #define FR_EQL	KC_EQL
 
-#define FR_A 	KC_Q
-#define FR_Z	KC_W
+
+	// 2 ligne
+
+#define FR_A KC_A
+#define FR_Z KC_S
+#define FR_E KC_E
+#define FR_R KC_R
+#define FR_T KC_T
+#define FR_Y KC_Y
+#define FR_U KC_U
+#define FR_I KC_I
+#define FR_O KC_O
+#define FR_P KC_P
 #define	FR_CIRC	KC_LBRC
 #define FR_DLR	KC_RBRC
 
-#define FR_Q 	KC_A
-#define FR_M 	KC_SCLN
+
+	// 3 ligne
+
+#define FR_Q KC_A
+#define FR_S KC_S
+#define FR_D KC_D
+#define FR_F KC_F
+#define FR_G KC_G
+#define FR_H KC_H
+#define FR_J KC_J
+#define FR_K KC_K
+#define FR_L KC_L
+#define FR_M KC_SCLN
 #define FR_UGRV	KC_QUOT
 #define FR_ASTR	KC_NUHS
 
+	// 4 ligne
+
 #define FR_LESS	KC_NUBS
-#define FR_W	KC_Z
+#define FR_W KC_Z
+#define FR_X KC_X
+#define FR_C KC_C
+#define FR_V KC_V
+#define FR_B KC_B
+#define FR_N KC_N
 #define FR_COMM	KC_M
 #define FR_SCLN	KC_COMM
 #define FR_COLN	KC_DOT
 #define FR_EXLM	KC_SLSH
+
 
 // Shifted characters
 #define FR_1 	LSFT(KC_1)
@@ -69,7 +102,7 @@
 #define FR_0 	LSFT(KC_0)
 #define FR_OVRR	LSFT(FR_RPRN)
 #define FR_PLUS LSFT(FR_EQL)
-
+#define FR_MORE	LSFT(KC_NUBS)
 #define FR_UMLT	LSFT(FR_CIRC)
 #define FR_PND	LSFT(FR_DLR)
 #define	FR_PERC	LSFT(FR_UGRV)
@@ -98,3 +131,13 @@
 #define FR_BULT	ALGR(FR_DLR)
 
 #endif
+
+
+
+/*
+[_LOWER] = {
+  {KC_ESC,  FR_AGRV, FR_EACU, FR_EGRV, _______, _______, _______, _______, _______, _______, _______, KC_0},
+  {KC_TAB,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+  {KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+  {KC_LCTL, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+},
