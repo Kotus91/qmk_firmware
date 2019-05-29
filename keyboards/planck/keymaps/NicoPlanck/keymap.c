@@ -27,10 +27,9 @@ enum planck_layers {
   _LOWER,
   _ADJUST
 };
-c
+
 enum planck_keycodes {
   AZERTY = SAFE_RANGE,
-  BEPO
 };
 
 #define LOWER MO(_LOWER)
@@ -86,11 +85,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Ctrl |      |      |      |      |             |      |   0  |   .  | ISO /|  =   |
  * `-----------------------------------------------------------------------------------'r
  */
+
 [_RAISE] = {
-  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,  FR_8,  FR_9,     KC_PPLS,  KC_BSPC},
-  {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,  FR_5,  FR_6,     KC_PMNS,  FR_PERC},
-  {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,  FR_2,  FR_3,     KC_PAST,  KC_ENT},
-  {KC_LCTL, _______, _______, _______, _______, _______, _______, ____,  FR_0,  KC_PDOT,  KC_PSLS,  KC_PEQL}
+  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,     FR_8,  FR_9,     KC_PPLS,  KC_BSPC},
+  {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,     FR_5,  FR_6,     KC_PMNS,  FR_PERC},
+  {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,     FR_2,  FR_3,     KC_PAST,  KC_ENT},
+  {KC_LCTL, _______, _______, _______, _______, _______, _______, _______,  FR_0,  FR_DOT,   FR_SLSH,  KC_EQL}
 },
 
 
@@ -127,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_ADJUST] = {
   {_______, RESET,   DEBUG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL },
-  {_______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, AZERTY,  BEPO, _______,    _______, _______},
+  {_______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, AZERTY,  _______, _______,    _______, _______},
   {_______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF, _______, _______, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______}
 }
@@ -155,7 +155,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-
+/*
     case BEPO:
       if (record->event.pressed) {
         print("mode just switched to bepo and this is a huge string\n");
@@ -163,6 +163,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+  */
   }
   return true;
 }
