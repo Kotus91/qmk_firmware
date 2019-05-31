@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   },
 */
 
-/* Raise
+/* Lower
  * ,-----------------------------------------------------------------------------------.
  * | Esc  |  F1  |  F2  |  F3  |  F4  |      |      |   7  |   8  |   9  |   +  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'r
  */
 
-[_RAISE] = {
+[_LOWER] = {
   {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,     FR_8,  FR_9,     KC_PPLS,  KC_BSPC},
   {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,     FR_5,  FR_6,     KC_PMNS,  FR_PERC},
   {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,     FR_2,  FR_3,     KC_PAST,  KC_ENT},
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 
-/* Lower
+/* Raise
  * ,-----------------------------------------------------------------------------------.
  * |  Esc |   à  |   é  |   è  |   '  |   (  |  )   |   "  |   -  |   _  |   @  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -104,9 +104,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
- _ \ ¨ ~
+ *
  */
-[_LOWER] = {
+
+[_RAISE] = {
   {KC_ESC,  FR_AGRV, 	FR_EACU, 	FR_EGRV, 	FR_APOS,  FR_LPRN,   FR_RPRN,  FR_UMLT,   FR_MINS,  FR_UNDS, 	FR_AT, 	  _______},
   {KC_TAB,  FR_UGRV,  FR_EURO,  FR_CCED,  FR_CIRC,  FR_LBRC,   FR_RBRC,  FR_LESS,   FR_MORE,  KC_HOME,  KC_END,   _______},
   {KC_LSFT, FR_HASH,  FR_AMP, 	_______,  FR_PIPE,  FR_LCBR,   FR_RCBR,  _______, 	FR_BSLS, 	KC_PGUP,  KC_PGDN,  KC_MUTE},
@@ -118,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      | Reset|      |      |      |      |      |      |      |      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |Aud on|Audoff|AGnorm|AGswap|Azerty| Bepo |      |      |      |
+ * |      |      |      |Aud on|Audoff|AGnorm|AGswap|Azerty|      |      |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
