@@ -45,8 +45,8 @@
 
 	// 2 ligne
 
-#define FR_A KC_A
-#define FR_Z KC_S
+#define FR_A KC_Q
+#define FR_Z KC_W
 #define FR_E KC_E
 #define FR_R KC_R
 #define FR_T KC_T

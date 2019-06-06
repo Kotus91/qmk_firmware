@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * `-----------------------------------------------------------------------------------'
 */
 [_AZERTY] = {
-  {KC_ESC,  FR_A,    FR_W,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
+  {KC_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
   {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_DEL},
   {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_ENT},
   {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
@@ -80,17 +80,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Tab  |  F5  |  F6  |  F7  |  F8  |      |      |   4  |   5  |   6  |   -  |   %  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|  F9  |  F10 |  F11 |  F12 |      |      |   1  |   2  |  3   |   *  | Ent  |
+ * | Shift|  F9  |  F10 |  F11 |  F12 |      |      |   1  |   2  |   3  |   *  | Ent  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |      |      |      |      |             |      |   0  |   .  | ISO /|  =   |
+ * | Ctrl |      |      |      |      |             |      |   .  |   0  | ISO /|  =   |
  * `-----------------------------------------------------------------------------------'r
  */
 
 [_LOWER] = {
-  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,     FR_8,  FR_9,     KC_PPLS,  KC_BSPC},
-  {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,     FR_5,  FR_6,     KC_PMNS,  FR_PERC},
-  {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,     FR_2,  FR_3,     KC_PAST,  KC_ENT},
-  {KC_LCTL, _______, _______, _______, _______, _______, _______, _______,  FR_0,  FR_DOT,   FR_SLSH,  KC_EQL}
+  {KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, FR_7,     FR_8,   FR_9,   KC_PPLS,  KC_BSPC},
+  {KC_TAB,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, FR_4,     FR_5,   FR_6,   KC_PMNS,  FR_PERC},
+  {KC_LSFT, KC_F9,  KC_F10,   KC_F11, KC_F12,   _______, _______, FR_1,     FR_2,   FR_3,   KC_PAST,  KC_ENT},
+  {KC_LCTL, _______, _______, _______, _______, _______, _______, _______,  FR_DOT, FR_0,   FR_SLSH,  KC_EQL}
 },
 
 
