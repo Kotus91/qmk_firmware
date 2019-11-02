@@ -41,17 +41,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * ,-----------------------------------------------------------------------------------.
 * | Esc  |   A  |   Z  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
 * |------+------+------+------+------+-------------+------+------+------+------+------|
-* | Tab  |   Q  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   M  | Del  |
+* | Tab  |   Q  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   M  | Enter|
 * |------+------+------+------+------+------|------+------+------+------+------+------|
-* | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   :  |   !  | Enter|
+* | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   :  |   !  | Del  |
 * |------+------+------+------+------+------+------+------+------+------+------+------|
 * | Ctrl | Menu | Alt  | GUI  |Lower |    Space    |Raise | Left |  Up  | Down | Right|
 * `-----------------------------------------------------------------------------------'
 */
 [_AZERTY] = {
   {KC_ESC,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC},
-  {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_DEL},
-  {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_ENT},
+  {KC_TAB,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_ENT},
+  {KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM, FR_DOT,  FR_COLN, FR_EXLM, KC_DEL},
   {KC_LCTL, KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT}
   },
 
