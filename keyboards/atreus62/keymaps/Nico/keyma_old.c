@@ -10,7 +10,6 @@ enum atreus62_layers {
   _AZERTY,
   _LOWER,
   _RAISE,
-  _QWERTY,
 };
 
 
@@ -20,16 +19,16 @@ enum atreus62_layers {
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 #define _AZERTY
-#define LOWER MO(_LOWER)
-#define RAISE MO(_RAISE)
+#define LOWER MO(LOWER)
+#define RAISE MO(RAISE)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Azerty
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * | Esc  |   à  |   é  |   è  |   '  |   ^  |             |   ç  |   -  |   _  |   "  |   @  | Bksp |
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * | Tab  |   A  |   Z  |   E  |   R  |   T  |             |  Y   |   U  |   I  |   O  |   P  |  Del |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
 * |      |   Q  |   S  |   D  |   F  |   G  |             |  H   |   J  |   K  |   L  |   M  |      |
@@ -43,38 +42,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_ESC,  FR_AGRV,    FR_EACU,    FR_EGRV,    FR_APOS, FR_CIRC,              FR_CCED    FR_MINS,   FR_UNDS,  FR_QUOT, FR_AT,   KC_BSPC},
   {KC_TAB,  FR_A,       FR_Z,       FR_E,       FR_R,    FR_T,                 FR_Y,      FR_U,      FR_I,     FR_O,    FR_P,    KC_DEL},
   {KC_LSFT, FR_Q,       FR_S,       FR_D,       FR_F,    FR_G,                 FR_H,      FR_J,      FR_K,     FR_L,    FR_M,    KC_ENT},
-  {KC_NO,   FR_W,       FR_X,       FR_C,       FR_V,    FR_B,        KC_ENT   KC_N,      FR_COMM,   FR_DOT,   FR_COLN, FR_EXLM,        },
+  {KC_NO,   FR_W,       FR_X,       FR_C,       FR_V,    FR_B,        KC_ENT   FR_N,      FR_COMM,   FR_DOT,   FR_COLN, FR_EXLM,        },
   {KC_LCTL, KC_APP,     KC_LALT,    KC_LGUI,    LOWER,   KC_BSPC,     KC_DEL,  KC_SPC,    RAISE,     KC_LEFT,  KC_UP,   KC_DOWN, KC_RGHT}
 },
 
 
-/* Qwerty
-* -------------------------------------------             ------------------------------------------.
-* | Esc  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  |   -  |
-* -------------------------------------------             ------------------------------------------.
-* | Tab  |   Q  |   W  |   E  |   R  |   T  |             |  Y   |   U  |   I  |   O  |   P  |   ]  |
-* |------+------+------+------+------+-------             -------+------+------+------+------+------|
-* |      |   A  |   S  |   D  |   F  |   G  |             |  H   |   J  |   K  |   L  |   ;  |      |
-* |Shift +------+------+------+------+-------             -------+------+------+------+------+ Enter|
-* |      |   Z  |   X  |   C  |   V  |   B  |             |  N   |   M  |   ,  |   .  |   /  |      |
-* |------+------+------+------+------+------+--------------------+------+------+------+------+------|
-* | Ctrl | Menu | Alt  | GUI  |Lower | Bksp | Del  | Enter| Spc  |Raise |  Up  | Left | Down | Right|
-* `-------------------------------------------------------------------------------------------------'
-*/
-
-[_QWERTY] = {
-  {KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC },
-  {KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL  },
-  {KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT  },
-  {KC_NO,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,      KC_ENT,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,         },
-  {KC_LCTL,  KC_APP,  KC_LALT, KC_LGUI, LOWER,   KC_BSPC,   KC_DEL,  KC_SPC,  RAISE,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT }
-},
-
-
 /* Lower
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * | Reset|      |      |      |      |   (  |             |   )  |      |      |   ^  |   /  | Bksp |
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * |      |      |      |      |      |   [  |             |   ]  |   7  |   8  |   9  |   *  |   =  |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
 * |      |      | Mute | Vol- | Vol+ |   {  |             |   }  |   4  |   5  |   6  |   +  |      |
@@ -95,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 /* Raise
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * |      |      |      |      |      |      |             | Home |      |      |      |      |      |
-* -------------------------------------------             ------------------------------------------.
+* ,------------------------------------------             ------------------------------------------.
 * |      |      |   ¨  |   €  |   oe |   #  |             | PgUp |  F9  |  F10 |  F11 |  F12 |      |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
 * |      |   <  |      |   $  |   ù  |   \  |             | PgDn |  F5  |  F6  |  F7  |  F8  |      |
@@ -140,6 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO  ,       KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,  KC_NO  ,  KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , RESET
       )
 
+      /*
       [_TRNS] = LAYOUT(
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS ,
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS ,
@@ -150,6 +127,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       };
 */
 
+
+const uint16_t PROGMEM fn_actions[] = {
+
+};
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
   // MACRODOWN only works in this function
