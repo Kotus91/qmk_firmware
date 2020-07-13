@@ -20,15 +20,15 @@ enum atreus62_layers {
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 #define _AZERTY
-#define LOWER MO(_LOWER)
-#define RAISE MO(_RAISE)
+#define _LOWER MO(_LOWER)
+#define _RAISE MO(_RAISE)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Azerty
 * -------------------------------------------             ------------------------------------------.
-* | Esc  |   à  |   é  |   è  |   '  |   ^  |             |   ç  |   -  |   _  |   "  |   @  | Bksp |
+* | Esc  |   à  |   é  |   è  |   '  |   (  |             |  )   |   -  |   _  |   "  |   @  | Bksp |
 * -------------------------------------------             ------------------------------------------.
 * | Tab  |   A  |   Z  |   E  |   R  |   T  |             |  Y   |   U  |   I  |   O  |   P  |  Del |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
@@ -40,11 +40,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * `-------------------------------------------------------------------------------------------------'
 */
 [_AZERTY] = {
-  {KC_ESC,  FR_AGRV,    FR_EACU,    FR_EGRV,    FR_APOS, FR_CIRC,              FR_CCED    FR_MINS,   FR_UNDS,  FR_QUOT, FR_AT,   KC_BSPC},
-  {KC_TAB,  FR_A,       FR_Z,       FR_E,       FR_R,    FR_T,                 FR_Y,      FR_U,      FR_I,     FR_O,    FR_P,    KC_DEL},
-  {KC_LSFT, FR_Q,       FR_S,       FR_D,       FR_F,    FR_G,                 FR_H,      FR_J,      FR_K,     FR_L,    FR_M,    KC_ENT},
-  {KC_NO,   FR_W,       FR_X,       FR_C,       FR_V,    FR_B,        KC_ENT   KC_N,      FR_COMM,   FR_DOT,   FR_COLN, FR_EXLM,        },
-  {KC_LCTL, KC_APP,     KC_LALT,    KC_LGUI,    LOWER,   KC_BSPC,     KC_DEL,  KC_SPC,    RAISE,     KC_LEFT,  KC_UP,   KC_DOWN, KC_RGHT}
+  {KC_ESC,  FR_AGRV,    FR_EACU,    FR_EGRV,    FR_APOS, FR_LPRN,            FR_RPRN    FR_MINS,   FR_UNDS,  FR_QUOT, FR_AT,   KC_BSPC},
+  {KC_TAB,  FR_A,       FR_Z,       FR_E,       FR_R,    FR_T,               FR_Y,      FR_U,      FR_I,     FR_O,    FR_P,    KC_DEL},
+  {KC_LSFT, FR_Q,       FR_S,       FR_D,       FR_F,    FR_G,               FR_H,      FR_J,      FR_K,     FR_L,    FR_M,    KC_ENT},
+  {KC_NO,   FR_W,       FR_X,       FR_C,       FR_V,    FR_B,      KC_ENT   KC_N,      FR_COMM,   FR_DOT,   FR_COLN, FR_EXLM,        },
+  {KC_LCTL, KC_APP,     KC_LALT,    KC_LGUI,    LOWER,   KC_BSPC,   KC_DEL,  KC_SPC,    RAISE,     KC_LEFT,  KC_UP,   KC_DOWN, KC_RGHT}
 },
 
 
@@ -73,46 +73,46 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
 * -------------------------------------------             ------------------------------------------.
-* | Reset|      |      |      |      |   (  |             |   )  |      |      |   ^  |   /  | Bksp |
-* -------------------------------------------             ------------------------------------------.
-* |      |      |      |      |      |   [  |             |   ]  |   7  |   8  |   9  |   *  |   =  |
+* | Reset|      |      |      |      |   [  |             |   ]  |      |   %  |   ^  |   /  | Bksp |
+* -------------------------------------------             -----------------------------------------.
+* |      |      |      |      |      |   {  |             |   }  |   7  |   8  |   9  |   *  |  Del |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
-* |      |      | Mute | Vol- | Vol+ |   {  |             |   }  |   4  |   5  |   6  |   +  |      |
-* |Shift +------+------+------+------+-------             -------+------+------+------+------+ Enter|
+* |      |      | Mute | Vol- | Vol+ |      |             |      |   4  |   5  |   6  |   +  |      |
+* |      +------+------+------+------+-------             -------+------+------+------+------+ Enter|
 * |      |      |      |      |      |      |             |      |   1  |   2  |   3  |   -  |      |
 * |------+------+------+------+------+------+--------------------+------+------+------+------+------|
-* | Ctrl | Menu | Alt  | GUI  |Lower | Bksp | Del  | Enter| Spc  | Raise|   0  |  .   |      |      |
+* |      |      |      |      |Lower | Bksp | Del  | Enter| Spc  | Raise|   0  |  .   |   =  |      |
 * `-------------------------------------------------------------------------------------------------'
 */
 [_LOWER] = {
-  {RESET,   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_LPRN,           KC_RPRN,   KC_NO,   KC_NO,  FR_QUOT, KC_SLSH,   KC_BSPC},
-  {KC_NO,   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_LBRC,           KC_RBRC,   KC_7,    KC_8,   KC_9,    KC_ASTR,   KC_EQL },
-  {KC_LSFT, KC_NO,  MU_OFF,   MUV_DE,   MUV_IN,   KC_LCBR,           KC_LCBR,   KC_4,    KC_5,   KC_6,    KC_PLUS,   KC_ENT },
+  {RESET,   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_LBRC,           KC_RBRC,   KC_NO,   KC_NO,  FR_QUOT, KC_SLSH,   KC_BSPC},
+  {KC_NO,   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_LCBR,           KC_RCBR,   KC_7,    KC_8,   KC_9,    KC_ASTR,   KC_DEL },
+  {KC_LSFT, KC_NO,  MU_OFF,   MUV_DE,   MUV_IN,   KC_NO,             KC_NO,     KC_4,    KC_5,   KC_6,    KC_PLUS,   KC_ENT },
   {KC_NO,   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_ENT   KC_NO,     KC_1,    KC_2,   KC_3,    KC_MINS,          },
-  {KC_LCTL, KC_APP, KC_LALT,  KC_LGUI,  LOWER,    KC_BSPC,  KC_DEL,  KC_SPC,    RAISE,   KC_0,   KC_DOT,  KC_NO,     KC_NO}
+  {KC_NO,   KC_NO,  KC_NO,    KC_NO,    LOWER,    KC_BSPC,  KC_DEL,  KC_SPC,    RAISE,   KC_0,   KC_DOT,  KC_EQL,     KC_NO}
 },
 
 
 
 /* Raise
 * -------------------------------------------             ------------------------------------------.
-* |      |      |      |      |      |      |             | Home |      |      |      |      |      |
+* |      | Home | PgUp | PgDn |  End |      |             |      |  F9  |  F10 |  F11 |  F12 |      |
 * -------------------------------------------             ------------------------------------------.
-* |      |      |   ¨  |   €  |   oe |   #  |             | PgUp |  F9  |  F10 |  F11 |  F12 |      |
+* |      |      |   ¨  |   €  |   oe |   #  |             |      |  F5  |  F6  |  F7  |  F8  |      |
 * |------+------+------+------+------+-------             -------+------+------+------+------+------|
-* |      |   <  |      |   $  |   ù  |   \  |             | PgDn |  F5  |  F6  |  F7  |  F8  |      |
-* |Shift +------+------+------+------+-------             -------+------+------+------+------+ Enter|
-* |      |   >  |      |      |   µ  |   |  |             |  End |  F1  |  F2  |  F3  |  F4  |      |
+* |      |   <  |      |   $  |   ù  |   \  |             |      |  F1  |  F2  |  F3  |  F4  |      |
+* |      +------+------+------+------+-------             -------+------+------+------+------+ Enter|
+* |      |   >  |      |      |   µ  |   |  |             |      |      |      |      |      |      |
 * |------+------+------+------+------+------+--------------------+------+------+------+------+------|
-* | Ctrl | Menu | Alt  | GUI  |Lower | Bksp | Del  | Enter| Spc  |Raise |  Up  | Left | Down | Right|
+* |      |      |      |      |Lower | Bksp | Del  | Enter| Spc  |Raise |      |      |      |      |
 * `-------------------------------------------------------------------------------------------------'
 */
 [_RAISE] = {
-  {KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,             KC_HOME,   KC_NO,   KC_NO,   KC_NO,  KC_NO,   KC_NO},
-  {KC_NO,    KC_NO,    KC_NO,    FR_EURO,  KC_NO,    KC_NUHS,           KC_PGUP,   KC_F9,   KC_F10,  KC_F11, KC_F12,  KC_NO},
-  {KC_LSFT,  KC_LABK,  MU_OFF,   MUV_DE,   MUV_IN,   KC_LCBR,           KC_PGDOWN, KC_F5,   KC_F6,   KC_F7,  KC_F8,   KC_ENT},
-  {KC_NO,    KC_RABK,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_ENT   KC_END,    KC_F1,   KC_F2,   KC_F3,  KC_F4,          },
-  {KC_LCTL,  KC_APP,   KC_LALT,  KC_LGUI,  LOWER,    KC_BSPC,  KC_DEL,  KC_SPC,    RAISE,   KC_LEFT, KC_UP,  KC_DOWN, KC_RGHT}
+  {KC_NO,    KC_HOME,  KC_PGUP,  KC_PGDN,  KC_END,   KC_NO,             KC_NO,   KC_F9,   KC_F10,  KC_F11, KC_F12,  KC_NO  },
+  {KC_NO,    KC_NO,    FR_UMLT,  FR_EURO,  KC_NO,    KC_NUHS,           KC_NO,   KC_F5,   KC_F6,   KC_F7,  KC_F8,   KC_NO  },
+  {KC_LSFT,  KC_LABK,  MU_OFF,   MUV_DE,   MUV_IN,   KC_LCBR,           KC_NO,   KC_F1,   KC_F2,   KC_F3,  KC_F4,   KC_ENT },
+  {KC_NO,    KC_RABK,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_ENT   KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,          },
+  {KC_NO,    KC_NO,    KC_NO,    KC_NO,    LOWER,    KC_BSPC,  KC_DEL,  KC_SPC,  RAISE,   KC_NO,   KC_NO,  KC_NO,   KC_NO}
 },
 
 
